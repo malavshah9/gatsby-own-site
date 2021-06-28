@@ -3,12 +3,16 @@ import {
   StyledMenuContainer,
   StyledListItem,
   StyledAnchor,
+  StyledNav,
+  StyledLabel,
 } from "./NavMenu.styled"
+import HamIcon from "../../icons/hamburger.icon"
+import CancelIcon from "../../icons/cancel.icon"
 
 function NavMenu({ navItems }) {
   return (
-    <nav>
-      <StyledMenuContainer>
+    <StyledNav>
+      <StyledMenuContainer className="menu">
         {navItems.map(item => {
           return (
             <StyledListItem>
@@ -23,7 +27,12 @@ function NavMenu({ navItems }) {
           )
         })}
       </StyledMenuContainer>
-    </nav>
+      <input type="checkbox" id="check" />
+      <StyledLabel for="check">
+        <HamIcon className="hamIcon" />
+        <CancelIcon className="crossIcon" />
+      </StyledLabel>
+    </StyledNav>
   )
 }
 
