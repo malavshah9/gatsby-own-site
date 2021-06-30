@@ -33,7 +33,7 @@ function NavMenu({ navItems }) {
         id="check"
         onChange={() => setIsMenuOpen(isOpen => !isOpen)}
       />
-      <StyledLabel for="check">
+      <StyledLabel htmlFor="check">
         <HamIcon className="hamIcon" />
         <CancelIcon className="crossIcon" />
       </StyledLabel>
