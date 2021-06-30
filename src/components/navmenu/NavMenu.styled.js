@@ -4,7 +4,12 @@ export const StyledMenuContainer = styled.ul`
   color: ${({ theme }) => theme.primaryFont};
   display: flex;
   @media (max-width: 620px) {
-    display: none;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    position: absolute;
+    top: 95px;
+    right: 5px;
+    height: ${({ isOpen }) => (isOpen ? "50px" : 0)};
+    flex-direction: column;
   }
 `
 export const StyledListItem = styled.li`

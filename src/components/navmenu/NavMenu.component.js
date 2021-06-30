@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   StyledMenuContainer,
   StyledListItem,
@@ -10,9 +10,10 @@ import HamIcon from "../../icons/hamburger.icon"
 import CancelIcon from "../../icons/cancel.icon"
 
 function NavMenu({ navItems }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <StyledNav>
-      <StyledMenuContainer className="menu">
+      <StyledMenuContainer isOpen={isMenuOpen}>
         {navItems.map(item => {
           return (
             <StyledListItem>
@@ -27,7 +28,11 @@ function NavMenu({ navItems }) {
           )
         })}
       </StyledMenuContainer>
-      <input type="checkbox" id="check" />
+      <input
+        type="checkbox"
+        id="check"
+        onChange={() => setIsMenuOpen(isOpen => !isOpen)}
+      />
       <StyledLabel for="check">
         <HamIcon className="hamIcon" />
         <CancelIcon className="crossIcon" />
