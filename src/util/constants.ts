@@ -9,3 +9,22 @@ export const CONSTANTS = {
     FOOTER_COPY_RIGHT: `© ${new Date().getFullYear()} by Malav Shah.`,
   },
 }
+
+export const LINKS = [
+  {
+    name: "Github",
+    link: "https://github.com/malavshah9",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/malav-shah-34945318b/",
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/malavshahh",
+  },
+  {
+    name: "Email",
+    link: "mailto:mdshah9574@gmail.com",
+  },
+]
